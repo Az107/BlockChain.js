@@ -1,0 +1,24 @@
+import * as readline from 'readline';
+import {Blockchain} from './blockchain';
+
+
+let blockchain : Blockchain = new Blockchain();
+// blockchain.load()
+
+let rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.on('line', (text: string) => {
+    if (text.length == 0 || text == " "){
+        console.log("invalid content")
+    }
+    blockchain.AddElement(text);
+});
+
+rl.on('close', () => {
+    // blockchain.save();
+    console.log("bye");
+});
+
