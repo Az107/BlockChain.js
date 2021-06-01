@@ -3,7 +3,7 @@ import {Blockchain} from './blockchain';
 
 
 let blockchain : Blockchain = new Blockchain();
-// blockchain.load()
+
 
 let rl = readline.createInterface({
     input: process.stdin,
